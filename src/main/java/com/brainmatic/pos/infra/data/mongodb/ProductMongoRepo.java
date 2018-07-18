@@ -12,7 +12,7 @@ public class ProductMongoRepo implements ProductRepo {
     private static ArrayList<Product> data = new ArrayList<>();
 
     public int getCount(){
-        System.out.println("Mongo DB");
+        System.out.println("Mongo DB COY BAHENOL");
         return 1;
     }
 
@@ -24,7 +24,7 @@ public class ProductMongoRepo implements ProductRepo {
     }
 
     public Product getById(int id){
-        System.out.println("Mongo DB");
+        System.out.println("Mong9o DB COY BAHENOL");
        return new Product();
     }
 
