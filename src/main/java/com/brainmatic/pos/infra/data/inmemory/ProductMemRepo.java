@@ -1,7 +1,7 @@
 package com.brainmatic.pos.infra.data.inmemory;
 
-import com.brainmatic.pos.core.Product;
-import com.brainmatic.pos.core.ProductRepo;
+import com.brainmatic.pos.core.entity.Product;
+import com.brainmatic.pos.core.entity.repo.entityrepo.ProductRepo;
 
 import java.util.ArrayList;
 
@@ -17,11 +17,12 @@ public class ProductMemRepo implements ProductRepo {
         data.add(prod);
     }
 
-    public void remove(int id){
+    public int remove(int id){
         for (Product p : data){
             if (p.getId()==id)
                 data.remove(p);
         }
+        return id;
     }
 
     public Product getById(int id){

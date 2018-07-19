@@ -1,7 +1,7 @@
 package com.brainmatic.pos.infra.data.mongodb;
 
-import com.brainmatic.pos.core.Product;
-import com.brainmatic.pos.core.ProductRepo;
+import com.brainmatic.pos.core.entity.Product;
+import com.brainmatic.pos.core.entity.repo.entityrepo.ProductRepo;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -20,7 +20,8 @@ public class ProductMongoRepo implements ProductRepo {
         data.add(prod);
     }
 
-    public void remove(int id){
+    public int remove(int id){
+        return id;
     }
 
     public Product getById(int id){

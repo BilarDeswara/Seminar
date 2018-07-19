@@ -1,6 +1,7 @@
 package com.brainmatic.pos.core;
 
-import com.brainmatic.pos.infra.data.inmemory.ProductMemRepo;
+import com.brainmatic.pos.core.entity.Product;
+import com.brainmatic.pos.core.entity.repo.entityrepo.ProductRepo;
 import org.springframework.stereotype.Service;
 
 @Service

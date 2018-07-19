@@ -1,11 +1,15 @@
-package com.brainmatic.pos.core;
+package com.brainmatic.pos.core.entity;
 
+import javax.persistence.Embeddable;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
+@Embeddable
 public class SaleLineItem {
     private int quantity;
-    private Product product;
     private BigDecimal unitPrice;
+    @ManyToOne
+    private Product product;
 
     public int getQuantity() {
         return quantity;
@@ -48,6 +52,3 @@ public class SaleLineItem {
     }
 }
 
-    class SaleLineItemIim {
-
-    }

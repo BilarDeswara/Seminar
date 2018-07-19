@@ -1,11 +1,21 @@
-package com.brainmatic.pos.core;
+package com.brainmatic.pos.core.entity;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
 public class Employee {
 
+    @Id
     private int id;
     private String name;
+
+    @Embedded
+    private Address home;
+//    private Address city;
     private LocalDate birdDate;
 
     public LocalDate getBirdDate() {
@@ -39,4 +49,22 @@ public class Employee {
     public Employee(){
        this.birdDate = LocalDate.now().minusYears(25);
     }
+
+    public Address getHome() {
+        return home;
+    }
+
+    public void setHome(Address home) {
+        this.home = home;
+    }
+
+//    public Address getCity() {
+//        return city;
+//    }
+//
+//    public void setCity(Address city) {
+//        this.city = city;
+//    }
+
+
 }

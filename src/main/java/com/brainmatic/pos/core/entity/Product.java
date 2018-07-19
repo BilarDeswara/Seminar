@@ -1,8 +1,13 @@
-package com.brainmatic.pos.core;
+package com.brainmatic.pos.core.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class Product {
+
+    @Id
     private int id;
     private String code;
     private String name;
@@ -44,9 +49,4 @@ public class Product {
     public void setPrice (long price) {
         setPrice(BigDecimal.valueOf(price));
     }
-
-//    public Product(){
-//        ProductRepository repo = new ProductRepository();
-//        setId(repo.getCount()+1);
-//    }
 }
